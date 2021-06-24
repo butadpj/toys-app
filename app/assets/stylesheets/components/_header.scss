@@ -1,0 +1,33 @@
+header {
+  font-size: 16px;
+  background: $primary-light;
+  width: 100%;
+  height: $header-height;
+  box-shadow: $shadow-light;
+  position: fixed;
+
+  @include horizontal-header;
+
+  .header-title {
+    font-size: 1.2em;
+    font-weight: $medium;
+    color: $dark1;
+  }
+
+  .header-user {
+    font-size: 0.9em;
+    font-weight: $medium;
+    color: $dark2;
+    @include horizontal-layout;
+
+    .user-name {
+      margin-right: 16px;
+    }
+
+    .user-avatar {
+      width: 30px;
+      height: 30px;
+      @include rounded-image;
+    }
+  }
+}
