@@ -1,0 +1,65 @@
+.toy-card {
+  @include block-center;
+  width: 100%;
+  max-width: 40rem;
+  box-shadow: $shadow-light;
+  border-bottom-left-radius: $radius2;
+  border-bottom-right-radius: $radius2;
+  margin-bottom: $margin-s;
+
+  .toy-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: $radius2;
+    border-top-right-radius: $radius2;
+  }
+
+  .toy-card--body {
+    background: $primary-light;
+    padding: 1em;
+    border-bottom-left-radius: $radius2;
+    border-bottom-right-radius: $radius2;
+
+    @include padding-lr;
+
+    .heading {
+      @include horizontal-layout;
+      justify-content: space-between;
+
+      .info {
+        @include horizontal-layout;
+
+        .user-avatar {
+          width: 50px;
+          height: 50px;
+          @include rounded-image;
+          margin-right: $margin-s;
+        }
+
+        .info-text {
+          .toy-name {
+            font-size: $h2;
+            font-weight: $medium;
+          }
+
+          .user-username {
+            font-size: $p2;
+            font-weight: $medium;
+            color: $dark2;
+          }
+        }
+      }
+    }
+
+    .description {
+      margin: $margin-s 0;
+      font-size: $p2;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}
