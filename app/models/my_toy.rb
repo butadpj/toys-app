@@ -1,0 +1,2 @@
+class MyToy < ApplicationRecord
+end
