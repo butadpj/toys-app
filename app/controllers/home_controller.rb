@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @sample = 'Hey'
+    @all_toys = MyToy.all
+    @users = User.all
   end
 end

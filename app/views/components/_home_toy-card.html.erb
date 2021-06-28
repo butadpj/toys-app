@@ -6,7 +6,7 @@
                 <%= image_tag("sample.jpg", alt: "user-avatar", class: "user-avatar") %>
                 <div class="info-text">
                     <div class="toy-name"><%= locals[:toy_name] %></div>
-                    <div class="user-username"><%= locals[:username] %></div>
+                    <div class="user-username">@<%= locals[:username] %></div>
                 </div>
             </div>
             <div>
@@ -17,13 +17,14 @@
             <%= locals[:description] %>
         </p>
         <div class="mdc-touch-target-wrapper">
-            <button class="mdc-button mdc-button--raised button-dark">
-                <span class="mdc-button__ripple"></span>
-                <span class="mdc-button__label">View</span>
-                <span class="mdc-button__touch"></span>
-            </button>
-        </div>
-            
+            <a href="toy-details/<%= locals[:id]%>" class="rm-decor">
+                <button class="mdc-button mdc-button--raised button-dark">
+                    <span class="mdc-button__ripple"></span>
+                    <span class="mdc-button__label">View</span>
+                    <span class="mdc-button__touch"></span>
+                </button>
+            </a>
+        </div>    
     </div>
 </div>  
 
