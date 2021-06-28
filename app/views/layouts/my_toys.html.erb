@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <%= render 'components/html-head', :locals => {:title => "View other people's toy collection", :page_style => "pages/home" }%>
+  <%= render 'components/html-head', :locals => {:title => "Toys App | %s's Toy" % [current_user.first_name], :page_style => "pages/my_toys" }%>
 
   <body>
-    <%= render 'components/header', :locals => {:header_title => "Home"} %>
+    <%= render 'components/header', :locals => {:header_title => "View Toy" }%>
     <main>
       <%= yield %>
     </main>

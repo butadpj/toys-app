@@ -1,0 +1,11 @@
+.back-button {
+    @include horizontal-layout;
+
+    padding-left: 25px;
+    text-decoration: none;
+    color: $secondary-dark;
+
+    span {
+        margin-right: 0.5rem;
+    }
+}

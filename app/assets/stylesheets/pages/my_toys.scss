@@ -1,0 +1,28 @@
+@import "./default";
+
+main {
+    width: 100%;
+    max-width: 80rem;
+
+    @include block-center;
+
+    @include column-flex;
+
+    padding-top: $header-height + 1rem;
+
+    .top-info {
+        @include padding-lr;
+
+        div {
+            @include horizontal-layout;
+
+            font-size: $h2;
+            font-weight: $light;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+main > * {
+    margin-bottom: $margin-l;
+}

@@ -1,3 +1,24 @@
 .rm-decor {
     text-decoration: none;
 }
+
+.mr-1 {
+    margin-right: $margin-s;
+}
+
+.mr-2 {
+    margin-right: $margin-m;
+}
+
+.mr-3 {
+    margin-right: $margin-l;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    color: $secondary-dark;
+}

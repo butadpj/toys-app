@@ -1,1 +1,40 @@
-<h2><%= @toy.username%></h2>
+<div class="top-info">
+    <div>
+        <span class="mr-1"><%= @toy.first_name%>'s Toy</span>
+        <% @users.each do |user| %>
+            <% if user.username == current_user.username %>
+                <% if user.avatar.attached? %>
+                    <%= image_tag(user.avatar, width: "40", alt: "user-avatar", class: "user-avatar") %>
+                <% else %>
+                    <%= image_tag("guest_user.png", width: "40", alt: "user-avatar", class: "user-avatar") %>
+                <% end %>
+            <% end %>
+        <% end %>
+    </div>
+    <br>
+    <a href="" class="link">View <%= @toy.first_name%>'s collection</a>
+</div>
+
+<div class="view_toy-card">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <%= image_tag("guest_user.png", alt: "carousel-img", class: "d-block w-100") %>
+            </div>
+        </div>
+        <button class="carousel-control-prev carousel-control-btn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next carousel-control-btn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="toy-info">
+        <h2 class="name"><%= @toy.name%></h2>
+        <p class="description "><%= @toy.description%></p>
+    </div>
+</div>
+
+<%= render "components/back-button"%>

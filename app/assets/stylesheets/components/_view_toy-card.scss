@@ -1,0 +1,46 @@
+$toy-card-mw: 50rem;
+
+.view_toy-card {
+    @include block-center;
+
+    width: 100%;
+    max-width: $toy-card-mw;
+
+    .carousel-item img {
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .carousel-control-btn {
+        transition: 0.3s ease-out;
+    }
+
+    .carousel-control-btn:hover {
+        background: rgba(0, 0, 0, 0.171);
+    }
+
+    .toy-info {
+        padding: 1em 0;
+
+        @include padding-lr;
+
+        background: $primary-light;
+
+        .name {
+            margin-bottom: $margin-s;
+        }
+
+        .description {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: $toy-card-mw) {
+    .view_toy-card {
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+    }
+}
