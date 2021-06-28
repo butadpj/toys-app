@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <%= render 'components/header', :locals => {:header_title => "Home"} %>
+    <%= render 'components/header', :locals => {:header_title => "Home", :user => get_username} %>
     <main>
       <%= yield %>
     </main>
