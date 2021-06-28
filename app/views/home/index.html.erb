@@ -1,12 +1,8 @@
 <section class="all-toys">
     <% @all_toys.each do |toy| %>
-        <% @users.each do |user| %>
-            <% if toy.user_id == user.id %>
-                <%= render 'components/home_toy-card', 
-                :locals => {:toy_name => toy.name, :username => user.username, 
-                :description => toy.description, :id => toy.id} 
-                %>
-            <% end %>
-        <% end %>
+        <%= render 'components/home_toy-card', 
+        :locals => {:toy_name => toy.name, :username => toy.username, 
+        :description => toy.description, :id => toy.id} 
+        %>
     <% end %>
 </section>
